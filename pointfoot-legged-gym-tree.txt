@@ -1,0 +1,208 @@
+.
+├── LICENSE
+├── README.md
+├── install.sh
+├── legged_gym
+│   ├── __init__.py
+│   ├── envs
+│   │   ├── __init__.py
+│   │   ├── a1
+│   │   │   └── a1_config.py
+│   │   ├── anymal_b
+│   │   │   └── anymal_b_config.py
+│   │   ├── anymal_c
+│   │   │   ├── anymal.py
+│   │   │   ├── flat
+│   │   │   │   └── anymal_c_flat_config.py
+│   │   │   └── mixed_terrains
+│   │   │       └── anymal_c_rough_config.py
+│   │   ├── base
+│   │   │   ├── base_config.py
+│   │   │   ├── base_task.py
+│   │   │   ├── legged_robot.py
+│   │   │   └── legged_robot_config.py
+│   │   ├── cassie
+│   │   │   ├── cassie.py
+│   │   │   └── cassie_config.py
+│   │   └── pointfoot
+│   │       ├── flat
+│   │       │   └── pointfoot_flat_config.py
+│   │       ├── mixed_terrain
+│   │       │   └── pointfoot_rough_config.py
+│   │       └── point_foot.py
+│   ├── scripts
+│   │   ├── export_policy_as_onnx.py
+│   │   ├── play.py
+│   │   └── train.py
+│   ├── tests
+│   │   └── test_env.py
+│   └── utils
+│       ├── __init__.py
+│       ├── helpers.py
+│       ├── logger.py
+│       ├── math.py
+│       ├── task_registry.py
+│       └── terrain.py
+├── licenses
+│   ├── assets
+│   │   ├── ANYmal_b_license.txt
+│   │   ├── ANYmal_c_license.txt
+│   │   ├── a1_license.txt
+│   │   └── cassie_license.txt
+│   └── dependencies
+│       └── matplotlib_license.txt
+├── pointfoot-legged-gym-tree.text
+├── pointfoot-legged-gym-tree.txt
+├── resources
+│   ├── actuator_nets
+│   │   └── anydrive_v3_lstm.pt
+│   └── robots
+│       ├── a1
+│       │   ├── a1_license.txt
+│       │   ├── meshes
+│       │   │   ├── calf.dae
+│       │   │   ├── hip.dae
+│       │   │   ├── thigh.dae
+│       │   │   ├── thigh_mirror.dae
+│       │   │   ├── trunk.dae
+│       │   │   └── trunk_A1.png
+│       │   └── urdf
+│       │       └── a1.urdf
+│       ├── anymal_b
+│       │   ├── ANYmal_b_license.txt
+│       │   ├── meshes
+│       │   │   ├── anymal_base.dae
+│       │   │   ├── anymal_foot.dae
+│       │   │   ├── anymal_hip_l.dae
+│       │   │   ├── anymal_hip_r.dae
+│       │   │   ├── anymal_shank_l.dae
+│       │   │   ├── anymal_shank_r.dae
+│       │   │   ├── anymal_thigh_l.dae
+│       │   │   ├── anymal_thigh_r.dae
+│       │   │   ├── base_uv_texture.jpg
+│       │   │   └── carbon_uv_texture.jpg
+│       │   └── urdf
+│       │       └── anymal_b.urdf
+│       ├── anymal_c
+│       │   ├── ANYmal_c_license.txt
+│       │   ├── meshes
+│       │   │   ├── base.dae
+│       │   │   ├── base.jpg
+│       │   │   ├── battery.dae
+│       │   │   ├── battery.jpg
+│       │   │   ├── bottom_shell.dae
+│       │   │   ├── bottom_shell.jpg
+│       │   │   ├── depth_camera.dae
+│       │   │   ├── depth_camera.jpg
+│       │   │   ├── drive.dae
+│       │   │   ├── drive.jpg
+│       │   │   ├── face.dae
+│       │   │   ├── face.jpg
+│       │   │   ├── foot.dae
+│       │   │   ├── foot.jpg
+│       │   │   ├── handle.dae
+│       │   │   ├── handle.jpg
+│       │   │   ├── hatch.dae
+│       │   │   ├── hatch.jpg
+│       │   │   ├── hip.jpg
+│       │   │   ├── hip_l.dae
+│       │   │   ├── hip_r.dae
+│       │   │   ├── lidar.dae
+│       │   │   ├── lidar.jpg
+│       │   │   ├── lidar_cage.dae
+│       │   │   ├── lidar_cage.jpg
+│       │   │   ├── remote.dae
+│       │   │   ├── remote.jpg
+│       │   │   ├── shank.jpg
+│       │   │   ├── shank_l.dae
+│       │   │   ├── shank_r.dae
+│       │   │   ├── thigh.dae
+│       │   │   ├── thigh.jpg
+│       │   │   ├── top_shell.dae
+│       │   │   ├── top_shell.jpg
+│       │   │   ├── wide_angle_camera.dae
+│       │   │   └── wide_angle_camera.jpg
+│       │   └── urdf
+│       │       └── anymal_c.urdf
+│       ├── cassie
+│       │   ├── cassie_license.txt
+│       │   ├── meshes
+│       │   │   ├── abduction.stl
+│       │   │   ├── abduction_mirror.stl
+│       │   │   ├── achilles-rod.stl
+│       │   │   ├── hip.stl
+│       │   │   ├── hip_mirror.stl
+│       │   │   ├── knee-output.stl
+│       │   │   ├── knee-output_mirror.stl
+│       │   │   ├── pelvis.stl
+│       │   │   ├── plantar-rod.stl
+│       │   │   ├── shin-bone.stl
+│       │   │   ├── shin-bone_mirror.stl
+│       │   │   ├── tarsus.stl
+│       │   │   ├── tarsus_mirror.stl
+│       │   │   ├── thigh.stl
+│       │   │   ├── thigh_mirror.stl
+│       │   │   ├── toe-output-crank.stl
+│       │   │   ├── toe.stl
+│       │   │   ├── toe_mirror.stl
+│       │   │   ├── torso.stl
+│       │   │   ├── yaw.stl
+│       │   │   └── yaw_mirror.stl
+│       │   └── urdf
+│       │       └── cassie.urdf
+│       └── pointfoot
+│           ├── PF_P441A
+│           │   ├── meshes
+│           │   │   ├── abad_L_Link.STL
+│           │   │   ├── abad_R_Link.STL
+│           │   │   ├── base_Link.STL
+│           │   │   ├── foot_L_Link.STL
+│           │   │   ├── foot_R_Link.STL
+│           │   │   ├── hip_L_Link.STL
+│           │   │   ├── hip_R_Link.STL
+│           │   │   ├── knee_L_Link.STL
+│           │   │   └── knee_R_Link.STL
+│           │   └── urdf
+│           │       └── robot.urdf
+│           ├── PF_P441B
+│           │   ├── meshes
+│           │   │   ├── abad_L_Link.STL
+│           │   │   ├── abad_R_Link.STL
+│           │   │   ├── base_Link.STL
+│           │   │   ├── foot_L_Link.STL
+│           │   │   ├── foot_R_Link.STL
+│           │   │   ├── hip_L_Link.STL
+│           │   │   ├── hip_R_Link.STL
+│           │   │   ├── knee_L_Link.STL
+│           │   │   └── knee_R_Link.STL
+│           │   └── urdf
+│           │       └── robot.urdf
+│           ├── PF_P441C
+│           │   ├── meshes
+│           │   │   ├── abad_L_Link.STL
+│           │   │   ├── abad_R_Link.STL
+│           │   │   ├── base_Link.STL
+│           │   │   ├── foot_L_Link.STL
+│           │   │   ├── foot_R_Link.STL
+│           │   │   ├── hip_L_Link.STL
+│           │   │   ├── hip_R_Link.STL
+│           │   │   ├── knee_L_Link.STL
+│           │   │   └── knee_R_Link.STL
+│           │   └── urdf
+│           │       └── robot.urdf
+│           └── PF_P441C2
+│               ├── meshes
+│               │   ├── abad_L_Link.STL
+│               │   ├── abad_R_Link.STL
+│               │   ├── base_Link.STL
+│               │   ├── foot_L_Link.STL
+│               │   ├── foot_R_Link.STL
+│               │   ├── hip_L_Link.STL
+│               │   ├── hip_R_Link.STL
+│               │   ├── knee_L_Link.STL
+│               │   └── knee_R_Link.STL
+│               └── urdf
+│                   └── robot.urdf
+└── setup.py
+
+47 directories, 159 files
